@@ -17,7 +17,7 @@
                BlueprintIdentifier = "F14D3E73185C5A7D001DE0B4"
                BuildableName = "PangDaCar.app"
                BlueprintName = "PangDaCar"
-               ReferencedContainer = "container:PangDaCar &#19979;&#21320;3.23.27.xcodeproj">
+               ReferencedContainer = "container:PangDaCar.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "F14D3E73185C5A7D001DE0B4"
             BuildableName = "PangDaCar.app"
             BlueprintName = "PangDaCar"
-            ReferencedContainer = "container:PangDaCar &#19979;&#21320;3.23.27.xcodeproj">
+            ReferencedContainer = "container:PangDaCar.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -54,7 +54,7 @@
             BlueprintIdentifier = "F14D3E73185C5A7D001DE0B4"
             BuildableName = "PangDaCar.app"
             BlueprintName = "PangDaCar"
-            ReferencedContainer = "container:PangDaCar &#19979;&#21320;3.23.27.xcodeproj">
+            ReferencedContainer = "container:PangDaCar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -72,7 +72,7 @@
             BlueprintIdentifier = "F14D3E73185C5A7D001DE0B4"
             BuildableName = "PangDaCar.app"
             BlueprintName = "PangDaCar"
-            ReferencedContainer = "container:PangDaCar &#19979;&#21320;3.23.27.xcodeproj">
+            ReferencedContainer = "container:PangDaCar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

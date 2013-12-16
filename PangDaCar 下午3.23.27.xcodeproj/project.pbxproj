@@ -7,34 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E712530185EE3E10005B45F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E71252A185EE3E10005B45F /* Default-568h@2x.png */; };
+		9E712531185EE3E10005B45F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E71252B185EE3E10005B45F /* Default.png */; };
+		9E712532185EE3E10005B45F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E71252C185EE3E10005B45F /* Default@2x.png */; };
+		9E712533185EE3E10005B45F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E71252D185EE3E10005B45F /* main.m */; };
+		9E712534185EE3E10005B45F /* PangDaCar-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E71252E185EE3E10005B45F /* PangDaCar-Info.plist */; };
+		9E712539185EE3ED0005B45F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E712536185EE3ED0005B45F /* AppDelegate.m */; };
+		9E71253A185EE3ED0005B45F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E712538185EE3ED0005B45F /* HomeViewController.m */; };
 		F14D3E78185C5A7D001DE0B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F14D3E77185C5A7D001DE0B4 /* UIKit.framework */; };
 		F14D3E7A185C5A7D001DE0B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F14D3E79185C5A7D001DE0B4 /* Foundation.framework */; };
 		F14D3E7C185C5A7D001DE0B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F14D3E7B185C5A7D001DE0B4 /* CoreGraphics.framework */; };
-		F14D3E82185C5A7E001DE0B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F14D3E80185C5A7E001DE0B4 /* InfoPlist.strings */; };
-		F14D3E84185C5A7E001DE0B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F14D3E83185C5A7E001DE0B4 /* main.m */; };
-		F14D3E88185C5A7E001DE0B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F14D3E87185C5A7E001DE0B4 /* AppDelegate.m */; };
-		F14D3E8A185C5A7E001DE0B4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F14D3E89185C5A7E001DE0B4 /* Default.png */; };
-		F14D3E8C185C5A7E001DE0B4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F14D3E8B185C5A7E001DE0B4 /* Default@2x.png */; };
-		F14D3E8E185C5A7E001DE0B4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F14D3E8D185C5A7E001DE0B4 /* Default-568h@2x.png */; };
-		F14D3E91185C5A7E001DE0B4 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F14D3E90185C5A7E001DE0B4 /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E71252A185EE3E10005B45F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "PangDaCar 下午3.23.27/Default-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		9E71252B185EE3E10005B45F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = "PangDaCar 下午3.23.27/Default.png"; sourceTree = SOURCE_ROOT; };
+		9E71252C185EE3E10005B45F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "PangDaCar 下午3.23.27/Default@2x.png"; sourceTree = SOURCE_ROOT; };
+		9E71252D185EE3E10005B45F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "PangDaCar 下午3.23.27/main.m"; sourceTree = SOURCE_ROOT; };
+		9E71252E185EE3E10005B45F /* PangDaCar-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "PangDaCar-Info.plist"; path = "PangDaCar 下午3.23.27/PangDaCar-Info.plist"; sourceTree = SOURCE_ROOT; };
+		9E71252F185EE3E10005B45F /* PangDaCar-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PangDaCar-Prefix.pch"; path = "PangDaCar 下午3.23.27/PangDaCar-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		9E712535185EE3ED0005B45F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "PangDaCar 下午3.23.27/AppDelegate.h"; sourceTree = SOURCE_ROOT; };
+		9E712536185EE3ED0005B45F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "PangDaCar 下午3.23.27/AppDelegate.m"; sourceTree = SOURCE_ROOT; };
+		9E712537185EE3ED0005B45F /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = "PangDaCar 下午3.23.27/HomeViewController.h"; sourceTree = SOURCE_ROOT; };
+		9E712538185EE3ED0005B45F /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = "PangDaCar 下午3.23.27/HomeViewController.m"; sourceTree = SOURCE_ROOT; };
 		F14D3E74185C5A7D001DE0B4 /* PangDaCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PangDaCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F14D3E77185C5A7D001DE0B4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F14D3E79185C5A7D001DE0B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F14D3E7B185C5A7D001DE0B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F14D3E7F185C5A7E001DE0B4 /* PangDaCar-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PangDaCar-Info.plist"; sourceTree = "<group>"; };
-		F14D3E81185C5A7E001DE0B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F14D3E83185C5A7E001DE0B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F14D3E85185C5A7E001DE0B4 /* PangDaCar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PangDaCar-Prefix.pch"; sourceTree = "<group>"; };
-		F14D3E86185C5A7E001DE0B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F14D3E87185C5A7E001DE0B4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F14D3E89185C5A7E001DE0B4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		F14D3E8B185C5A7E001DE0B4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		F14D3E8D185C5A7E001DE0B4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		F14D3E8F185C5A7E001DE0B4 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		F14D3E90185C5A7E001DE0B4 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +80,10 @@
 		F14D3E7D185C5A7D001DE0B4 /* PangDaCar */ = {
 			isa = PBXGroup;
 			children = (
-				F14D3E86185C5A7E001DE0B4 /* AppDelegate.h */,
-				F14D3E87185C5A7E001DE0B4 /* AppDelegate.m */,
-				F14D3E8F185C5A7E001DE0B4 /* HomeViewController.h */,
-				F14D3E90185C5A7E001DE0B4 /* HomeViewController.m */,
+				9E712535185EE3ED0005B45F /* AppDelegate.h */,
+				9E712536185EE3ED0005B45F /* AppDelegate.m */,
+				9E712537185EE3ED0005B45F /* HomeViewController.h */,
+				9E712538185EE3ED0005B45F /* HomeViewController.m */,
 				F14D3E7E185C5A7D001DE0B4 /* Supporting Files */,
 			);
 			path = PangDaCar;
@@ -93,13 +92,12 @@
 		F14D3E7E185C5A7D001DE0B4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F14D3E7F185C5A7E001DE0B4 /* PangDaCar-Info.plist */,
-				F14D3E80185C5A7E001DE0B4 /* InfoPlist.strings */,
-				F14D3E83185C5A7E001DE0B4 /* main.m */,
-				F14D3E85185C5A7E001DE0B4 /* PangDaCar-Prefix.pch */,
-				F14D3E89185C5A7E001DE0B4 /* Default.png */,
-				F14D3E8B185C5A7E001DE0B4 /* Default@2x.png */,
-				F14D3E8D185C5A7E001DE0B4 /* Default-568h@2x.png */,
+				9E71252A185EE3E10005B45F /* Default-568h@2x.png */,
+				9E71252B185EE3E10005B45F /* Default.png */,
+				9E71252C185EE3E10005B45F /* Default@2x.png */,
+				9E71252D185EE3E10005B45F /* main.m */,
+				9E71252E185EE3E10005B45F /* PangDaCar-Info.plist */,
+				9E71252F185EE3E10005B45F /* PangDaCar-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -133,7 +131,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = ysw;
 			};
-			buildConfigurationList = F14D3E6F185C5A7D001DE0B4 /* Build configuration list for PBXProject "PangDaCar" */;
+			buildConfigurationList = F14D3E6F185C5A7D001DE0B4 /* Build configuration list for PBXProject "PangDaCar 下午3.23.27" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -155,10 +153,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F14D3E82185C5A7E001DE0B4 /* InfoPlist.strings in Resources */,
-				F14D3E8A185C5A7E001DE0B4 /* Default.png in Resources */,
-				F14D3E8C185C5A7E001DE0B4 /* Default@2x.png in Resources */,
-				F14D3E8E185C5A7E001DE0B4 /* Default-568h@2x.png in Resources */,
+				9E712534185EE3E10005B45F /* PangDaCar-Info.plist in Resources */,
+				9E712532185EE3E10005B45F /* Default@2x.png in Resources */,
+				9E712530185EE3E10005B45F /* Default-568h@2x.png in Resources */,
+				9E712531185EE3E10005B45F /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,24 +167,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F14D3E84185C5A7E001DE0B4 /* main.m in Sources */,
-				F14D3E88185C5A7E001DE0B4 /* AppDelegate.m in Sources */,
-				F14D3E91185C5A7E001DE0B4 /* HomeViewController.m in Sources */,
+				9E712539185EE3ED0005B45F /* AppDelegate.m in Sources */,
+				9E712533185EE3E10005B45F /* main.m in Sources */,
+				9E71253A185EE3ED0005B45F /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		F14D3E80185C5A7E001DE0B4 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F14D3E81185C5A7E001DE0B4 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F14D3E95185C5A7E001DE0B4 /* Debug */ = {
@@ -268,7 +255,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F14D3E6F185C5A7D001DE0B4 /* Build configuration list for PBXProject "PangDaCar" */ = {
+		F14D3E6F185C5A7D001DE0B4 /* Build configuration list for PBXProject "PangDaCar 下午3.23.27" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F14D3E95185C5A7E001DE0B4 /* Debug */,

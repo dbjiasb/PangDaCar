@@ -1,0 +1,292 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F14D3E78185C5A7D001DE0B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F14D3E77185C5A7D001DE0B4 /* UIKit.framework */; };
+		F14D3E7A185C5A7D001DE0B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F14D3E79185C5A7D001DE0B4 /* Foundation.framework */; };
+		F14D3E7C185C5A7D001DE0B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F14D3E7B185C5A7D001DE0B4 /* CoreGraphics.framework */; };
+		F14D3E82185C5A7E001DE0B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F14D3E80185C5A7E001DE0B4 /* InfoPlist.strings */; };
+		F14D3E84185C5A7E001DE0B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F14D3E83185C5A7E001DE0B4 /* main.m */; };
+		F14D3E88185C5A7E001DE0B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F14D3E87185C5A7E001DE0B4 /* AppDelegate.m */; };
+		F14D3E8A185C5A7E001DE0B4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F14D3E89185C5A7E001DE0B4 /* Default.png */; };
+		F14D3E8C185C5A7E001DE0B4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F14D3E8B185C5A7E001DE0B4 /* Default@2x.png */; };
+		F14D3E8E185C5A7E001DE0B4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F14D3E8D185C5A7E001DE0B4 /* Default-568h@2x.png */; };
+		F14D3E91185C5A7E001DE0B4 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F14D3E90185C5A7E001DE0B4 /* HomeViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F14D3E74185C5A7D001DE0B4 /* PangDaCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PangDaCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F14D3E77185C5A7D001DE0B4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F14D3E79185C5A7D001DE0B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F14D3E7B185C5A7D001DE0B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F14D3E7F185C5A7E001DE0B4 /* PangDaCar-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PangDaCar-Info.plist"; sourceTree = "<group>"; };
+		F14D3E81185C5A7E001DE0B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F14D3E83185C5A7E001DE0B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F14D3E85185C5A7E001DE0B4 /* PangDaCar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PangDaCar-Prefix.pch"; sourceTree = "<group>"; };
+		F14D3E86185C5A7E001DE0B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F14D3E87185C5A7E001DE0B4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F14D3E89185C5A7E001DE0B4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		F14D3E8B185C5A7E001DE0B4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F14D3E8D185C5A7E001DE0B4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F14D3E8F185C5A7E001DE0B4 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		F14D3E90185C5A7E001DE0B4 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F14D3E71185C5A7D001DE0B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F14D3E78185C5A7D001DE0B4 /* UIKit.framework in Frameworks */,
+				F14D3E7A185C5A7D001DE0B4 /* Foundation.framework in Frameworks */,
+				F14D3E7C185C5A7D001DE0B4 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F14D3E6B185C5A7D001DE0B4 = {
+			isa = PBXGroup;
+			children = (
+				F14D3E7D185C5A7D001DE0B4 /* PangDaCar */,
+				F14D3E76185C5A7D001DE0B4 /* Frameworks */,
+				F14D3E75185C5A7D001DE0B4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F14D3E75185C5A7D001DE0B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F14D3E74185C5A7D001DE0B4 /* PangDaCar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F14D3E76185C5A7D001DE0B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F14D3E77185C5A7D001DE0B4 /* UIKit.framework */,
+				F14D3E79185C5A7D001DE0B4 /* Foundation.framework */,
+				F14D3E7B185C5A7D001DE0B4 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F14D3E7D185C5A7D001DE0B4 /* PangDaCar */ = {
+			isa = PBXGroup;
+			children = (
+				F14D3E86185C5A7E001DE0B4 /* AppDelegate.h */,
+				F14D3E87185C5A7E001DE0B4 /* AppDelegate.m */,
+				F14D3E8F185C5A7E001DE0B4 /* HomeViewController.h */,
+				F14D3E90185C5A7E001DE0B4 /* HomeViewController.m */,
+				F14D3E7E185C5A7D001DE0B4 /* Supporting Files */,
+			);
+			path = PangDaCar;
+			sourceTree = "<group>";
+		};
+		F14D3E7E185C5A7D001DE0B4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F14D3E7F185C5A7E001DE0B4 /* PangDaCar-Info.plist */,
+				F14D3E80185C5A7E001DE0B4 /* InfoPlist.strings */,
+				F14D3E83185C5A7E001DE0B4 /* main.m */,
+				F14D3E85185C5A7E001DE0B4 /* PangDaCar-Prefix.pch */,
+				F14D3E89185C5A7E001DE0B4 /* Default.png */,
+				F14D3E8B185C5A7E001DE0B4 /* Default@2x.png */,
+				F14D3E8D185C5A7E001DE0B4 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F14D3E73185C5A7D001DE0B4 /* PangDaCar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F14D3E97185C5A7E001DE0B4 /* Build configuration list for PBXNativeTarget "PangDaCar" */;
+			buildPhases = (
+				F14D3E70185C5A7D001DE0B4 /* Sources */,
+				F14D3E71185C5A7D001DE0B4 /* Frameworks */,
+				F14D3E72185C5A7D001DE0B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PangDaCar;
+			productName = PangDaCar;
+			productReference = F14D3E74185C5A7D001DE0B4 /* PangDaCar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F14D3E6C185C5A7D001DE0B4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = ysw;
+			};
+			buildConfigurationList = F14D3E6F185C5A7D001DE0B4 /* Build configuration list for PBXProject "PangDaCar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F14D3E6B185C5A7D001DE0B4;
+			productRefGroup = F14D3E75185C5A7D001DE0B4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F14D3E73185C5A7D001DE0B4 /* PangDaCar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F14D3E72185C5A7D001DE0B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F14D3E82185C5A7E001DE0B4 /* InfoPlist.strings in Resources */,
+				F14D3E8A185C5A7E001DE0B4 /* Default.png in Resources */,
+				F14D3E8C185C5A7E001DE0B4 /* Default@2x.png in Resources */,
+				F14D3E8E185C5A7E001DE0B4 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F14D3E70185C5A7D001DE0B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F14D3E84185C5A7E001DE0B4 /* main.m in Sources */,
+				F14D3E88185C5A7E001DE0B4 /* AppDelegate.m in Sources */,
+				F14D3E91185C5A7E001DE0B4 /* HomeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F14D3E80185C5A7E001DE0B4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F14D3E81185C5A7E001DE0B4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F14D3E95185C5A7E001DE0B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F14D3E96185C5A7E001DE0B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F14D3E98185C5A7E001DE0B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PangDaCar/PangDaCar-Prefix.pch";
+				INFOPLIST_FILE = "PangDaCar/PangDaCar-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F14D3E99185C5A7E001DE0B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PangDaCar/PangDaCar-Prefix.pch";
+				INFOPLIST_FILE = "PangDaCar/PangDaCar-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F14D3E6F185C5A7D001DE0B4 /* Build configuration list for PBXProject "PangDaCar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F14D3E95185C5A7E001DE0B4 /* Debug */,
+				F14D3E96185C5A7E001DE0B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F14D3E97185C5A7E001DE0B4 /* Build configuration list for PBXNativeTarget "PangDaCar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F14D3E98185C5A7E001DE0B4 /* Debug */,
+				F14D3E99185C5A7E001DE0B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F14D3E6C185C5A7D001DE0B4 /* Project object */;
+}

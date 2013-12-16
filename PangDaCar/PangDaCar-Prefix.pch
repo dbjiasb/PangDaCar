@@ -11,4 +11,11 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+
+#import "config.h"
+#import "MessageHead.h"
+#import "MyUtil.h"
+#import "MyDefaults.h"
+#import "DHServiceInvocation.h"
+
 #endif

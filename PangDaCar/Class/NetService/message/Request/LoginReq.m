@@ -13,7 +13,7 @@
 
 - (void)dealloc
 {
-    self.uuid = nil;
+    self.account = nil;
     self.password = nil;
     
     [super dealloc];
@@ -27,7 +27,7 @@
     
     if ([self.method isEqualToString:@"POST"] )
     {
-        [ret addEntriesFromDictionary:[self dictionaryWithValuesForKeys:[NSArray arrayWithObjects:@"uuid",@"password",nil]]];
+        [ret addEntriesFromDictionary:[self dictionaryWithValuesForKeys:[NSArray arrayWithObjects:@"account",@"password",nil]]];
     }
     
     return ret ;

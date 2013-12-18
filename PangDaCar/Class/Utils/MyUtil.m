@@ -552,6 +552,7 @@ static char const * const sectionKey = "kUIButtonSectionKey";
     title.textAlignment = NSTextAlignmentCenter;
     title.font = [UIFont boldSystemFontOfSize:22];
     title.backgroundColor = [UIColor clearColor];
+    title.textColor=[UIColor blackColor];
     self.navigationItem.titleView = title;
     
 }
@@ -584,6 +585,20 @@ static char const * const sectionKey = "kUIButtonSectionKey";
 #pragma mark - MyUtil
 
 @implementation MyUtil
+
++ (UIButton *)buttonWithFrame:(CGRect)frame
+                       target:target
+                  title:(NSString *)title
+                 action:(SEL)selector
+{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    btn.frame = frame;
+    [btn setTitle:title forState:UIControlStateNormal];
+    [btn addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
+    
+    return btn;
+}
+
 
 + (id)chkUpdateEventHandle:(id)handle
 {

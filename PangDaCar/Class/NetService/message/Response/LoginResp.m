@@ -25,7 +25,7 @@
         return;
     [super fillFromDictionary:dic];
     
-    NSDictionary *tem1 = [dic objectForKey:@"resp_data"];
+    NSDictionary *tem1 = [dic objectForKey:@"resp_content"];
 
     self.access_token =  ISNULL([tem1 objectForKey:@"access_token"]) ? @"" : [tem1 objectForKey:@"access_token"];
     self.uuid = ISNULL([tem1 objectForKey:@"uuid"]) ? @"" : [tem1 objectForKey:@"uuid"];

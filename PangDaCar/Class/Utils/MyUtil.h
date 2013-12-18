@@ -177,6 +177,9 @@
 @end
 
 @interface MyUtil : NSObject
++ (UIButton *)buttonWithFrame:(CGRect)frame
+                        title:(NSString *)title
+                       action:(SEL)selector;
 
 + (id)chkUpdateEventHandle:(id)handle;
 

@@ -35,7 +35,7 @@
 #else
 
 #define BAIDUKEY @"A4AcQRtUmiGQ2j3YnHZGxmMd"
-#define ServerURL @"https://chanaapp.chinatsp.com"
+#define ServerURL @"https://obd.chinatsp.com"
 #define Build     @"Build 12.6.1.1"
 
 #endif

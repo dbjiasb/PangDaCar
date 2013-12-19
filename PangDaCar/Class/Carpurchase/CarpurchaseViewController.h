@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CarpurchaseViewController : UIViewController
+@interface CarpurchaseViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
 @end

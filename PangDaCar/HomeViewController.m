@@ -23,6 +23,7 @@
 #import "LoginViewController.h"
 #import "RoadSecureViewController.h"
 #import "CarpurchaseViewController.h"
+#import "FuelCalculateViewController.h"
 #import "MyDefaults.h"
 
 @interface HomeViewController ()
@@ -104,8 +105,6 @@
     [more_Btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [more_Btn setImage:[UIImage imageNamed:iPhone5?@"more_icon1136":@"more_icon@2x"] forState:UIControlStateNormal];
     [self.view addSubview:more_Btn];
-
-
 }
 
 -(void)btnClick:(id)sender
@@ -160,12 +159,11 @@
             break;
         case MainTain_Alert_Tag:
         {
-            MainTainAlertViewController *maintainalert=[[MainTainAlertViewController alloc] init];
-            UINavigationController *maintainalertNav=[[UINavigationController alloc] initWithRootViewController:maintainalert];
+            MainTainAlertViewController *maintainalert=[[[MainTainAlertViewController alloc] init] autorelease];
+            UINavigationController *maintainalertNav=[[[UINavigationController alloc] initWithRootViewController:maintainalert] autorelease];
             [self presentViewController:maintainalertNav animated:YES completion:^{
                 
             }];
-            [maintainalert release];
         }
             break;
         case CarPurse_Tag:
@@ -173,6 +171,15 @@
             CarpurchaseViewController *carpurchase=[[[CarpurchaseViewController alloc] init] autorelease];
             UINavigationController *carpurcharNav=[[[UINavigationController alloc] initWithRootViewController:carpurchase] autorelease];
             [self presentViewController:carpurcharNav animated:YES completion:^{
+                
+            }];
+        }
+            break;
+        case Fuel_Tag:
+        {
+            FuelCalculateViewController *fuelcalculate=[[[FuelCalculateViewController alloc] init] autorelease];
+            UINavigationController *fuelcalculateNav=[[[UINavigationController alloc] initWithRootViewController:fuelcalculate] autorelease];
+            [self presentViewController:fuelcalculateNav animated:YES completion:^{
                 
             }];
         }

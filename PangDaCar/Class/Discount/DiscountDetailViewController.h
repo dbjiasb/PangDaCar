@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface DiscountDetailViewController : UIViewController
-
+{
+    UILabel *titleLabel;
+    UIImageView *imageview;
+    UILabel *timeLabel;
+    UILabel *contentLabel;
+}
+@property (nonatomic,copy) NSString *dicountId;
 @end

@@ -49,6 +49,11 @@
     
 }
 
+-(void)loadData
+{
+    
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

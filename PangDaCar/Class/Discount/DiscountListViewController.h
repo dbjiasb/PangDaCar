@@ -11,5 +11,6 @@
 @interface DiscountListViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 {
     NSMutableArray *totalArray;
+    UITableView *table;
 }
 @end

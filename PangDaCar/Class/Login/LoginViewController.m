@@ -5,6 +5,8 @@
 //  Created by ysw on 13-12-18.
 //  Copyright (c) 2013年 ysw. All rights reserved.
 //
+#define CheckTag 100001
+#define ConfirmTag 100002
 
 #import "LoginViewController.h"
 
@@ -58,7 +60,7 @@
     bgview2.userInteractionEnabled=YES;
     UILabel *lable2=[[[UILabel alloc] initWithFrame:CGRectMake(10.0, 17.5,90.0, 25.0)] autorelease];
     lable2.backgroundColor=[UIColor clearColor];
-    lable2.text=@"新密码:";
+    lable2.text=@"密码:";
     lable2.textAlignment=NSTextAlignmentRight;
     lable2.textColor=[UIColor blackColor];
     [bgview2 addSubview:lable2];
@@ -71,23 +73,28 @@
     [bgview2 addSubview:pwdTf];
     [self.view addSubview:bgview2];
     
-    UIButton *saveBtn=[UIButton buttonWithType:UIButtonTypeCustom];
+    UIButton *saveBtn=[UIButton buttonWithType:UIButtonTypeInfoDark];
     saveBtn.frame=CGRectMake(20.0, bgview2.frame.origin.y+bgview2.frame.size.height+20.0, 23.5, 22.5);
-    [saveBtn setImage:[UIImage imageNamed:@"checked_icon"] forState:UIControlStateNormal];
+    [saveBtn setImage:[UIImage imageNamed:@"unchecked_icon"] forState:UIControlStateNormal];
+    [saveBtn setImage:[UIImage imageNamed:@"checked_icon"] forState:UIControlStateSelected];
+    saveBtn.tag=CheckTag;
+    saveBtn.selected=NO;
+    [saveBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:saveBtn];
     
-    UILabel *label=[[[UILabel alloc] initWithFrame:CGRectMake(saveBtn.frame.origin.x+saveBtn.frame.size.width, bgview2.frame.origin.y+bgview2.frame.size.height+21.0, 80.0, 20)] autorelease];
+    UILabel *label=[[[UILabel alloc] initWithFrame:CGRectMake(saveBtn.frame.origin.x+saveBtn.frame.size.width+10.0, bgview2.frame.origin.y+bgview2.frame.size.height+21.0, 80.0, 20)] autorelease];
     label.textColor=[UIColor blackColor];
     label.backgroundColor=[UIColor clearColor];
     label.text=@"记住密码";
     [self.view addSubview:label];
     
     UIButton *confirmBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
-    confirmBtn.frame=CGRectMake(13.0,bgview2.frame.origin.y+bgview2.frame.size.height+10.0, 294.0, 49.0);
+    confirmBtn.frame=CGRectMake(13.0,saveBtn.frame.origin.y+saveBtn.frame.size.height+10.0, 294.0, 49.0);
     [confirmBtn setTitle:@"登陆" forState:UIControlStateNormal];
     [confirmBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [confirmBtn setBackgroundImage:[UIImage imageNamed:@"btnbg"] forState:UIControlStateNormal];
     confirmBtn.titleLabel.font=[UIFont systemFontOfSize:20.0];
+    confirmBtn.tag=ConfirmTag;
     [confirmBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:confirmBtn];
 }
@@ -104,26 +111,35 @@
 
 -(void)btnClick:(id)sender
 {
-    self.username=userTf.text;
-    self.pwd=pwdTf.text;
-    if(ISNULL(self.username))
+    UIButton *btn=(UIButton *)sender;
+    if(btn.tag==CheckTag)
     {
-        [MyUtil showAlert:@"请输入用户名"];
-        return;
+        btn.selected=!btn.selected;
     }
-    if(ISNULL(self.pwd))
+    else if (btn.tag==ConfirmTag)
     {
-        [MyUtil showAlert:@"请输入密码"];
+        self.username=userTf.text;
+        self.pwd=pwdTf.text;
+        if(ISNULL(self.username))
+        {
+            [MyUtil showAlert:@"请输入用户名"];
+            return;
+        }
+        if(ISNULL(self.pwd))
+        {
+            [MyUtil showAlert:@"请输入密码"];
+        }
+        [userTf resignFirstResponder];
+        [pwdTf resignFirstResponder];
+        [self loginAction];
     }
-    [self loginAction];
 }
 
 - (void)loginAction
 {
-    [MyUtil createProgressDialog:self.view];
-    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     LoginReq *req = [[LoginReq alloc] init];
-    req.account = self.username;
+    req.uuid = self.username;
     req.password = self.pwd;
     
     loginVoucher = [DHServiceInvocation invokeWithNAME:Invoke_Name_Login
@@ -133,20 +149,24 @@
 
 - (void)didSuccess:(id)result voucher:(id)voucher
 {
-    [MyUtil closeProgressDialog:self.view];
+    [MBProgressHUD hideHUDForView:self.view animated:NO];
     if (voucher == loginVoucher)
     {
         loginVoucher = nil;
         
         LoginResp *resp = (LoginResp *)result;
-        NSLog(@"====%@",resp.access_token);
-        
+        [MyDefaults setUserName:resp.uuid];
+        [MyDefaults setTuid:resp.tuid];
+        [MyDefaults setToken:resp.access_token];
+        [self dismissViewControllerAnimated:YES completion:^{
+            
+        }];
     }
 }
 
 - (void)didFailure:(NSError *)err voucher:(id)voucher
 {
-    [MyUtil closeProgressDialog:self.view];
+    [MBProgressHUD hideHUDForView:self.view animated:NO];
     if (voucher == loginVoucher)
     {
         loginVoucher = nil;

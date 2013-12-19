@@ -22,6 +22,7 @@
 #import "MainTainOrderViewController.h"
 #import "LoginViewController.h"
 #import "RoadSecureViewController.h"
+#import "CarpurchaseViewController.h"
 #import "MyDefaults.h"
 
 @interface HomeViewController ()
@@ -169,7 +170,11 @@
             break;
         case CarPurse_Tag:
         {
-            
+            CarpurchaseViewController *carpurchase=[[[CarpurchaseViewController alloc] init] autorelease];
+            UINavigationController *carpurcharNav=[[[UINavigationController alloc] initWithRootViewController:carpurchase] autorelease];
+            [self presentViewController:carpurcharNav animated:YES completion:^{
+                
+            }];
         }
             break;
         case More_Tag:

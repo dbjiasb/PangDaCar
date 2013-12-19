@@ -10,6 +10,7 @@
 #import "EditPwdViewController.h"
 #import "CarInfoViewController.h"
 #import "AboutViewController.h"
+#import "FeedBackViewController.h"
 
 @interface MoreViewController ()
 
@@ -109,6 +110,12 @@
             AboutViewController *about=[[AboutViewController alloc] init];
             [self.navigationController pushViewController:about animated:YES];
             [about release];
+        }
+            break;
+        case 3:
+        {
+            FeedBackViewController *feedback=[[FeedBackViewController alloc] init];
+            [self.navigationController pushViewController:feedback animated:YES];
         }
             break;
         default:

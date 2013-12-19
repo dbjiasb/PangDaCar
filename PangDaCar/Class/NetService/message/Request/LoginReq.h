@@ -10,7 +10,7 @@
 
 @interface LoginReq : RequestMsg
 
-@property (nonatomic, copy) NSString *account;
+@property (nonatomic, copy) NSString *uuid;
 @property (nonatomic, copy) NSString *password;
 
 - (NSDictionary *)dictionary;

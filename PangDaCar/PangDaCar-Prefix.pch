@@ -17,5 +17,6 @@
 #import "MyUtil.h"
 #import "MyDefaults.h"
 #import "DHServiceInvocation.h"
+#import "MBProgressHUD.h"
 
 #endif

@@ -178,6 +178,7 @@
 
 @interface MyUtil : NSObject
 + (UIButton *)buttonWithFrame:(CGRect)frame
+                       target:target
                         title:(NSString *)title
                        action:(SEL)selector;
 

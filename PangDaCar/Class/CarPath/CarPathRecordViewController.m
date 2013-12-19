@@ -21,7 +21,7 @@
     self = [super init];
     if (self) {
         // Custom initialization
-        totalArray=[[NSMutableArray alloc] initWithObjects:@"2013年12月25号",@"2013年12月24号",@"2013年12月23号",nil];
+        totalArray = [[NSMutableArray alloc] initWithObjects:@"2013年12月25号",@"2013年12月24号",@"2013年12月23号",nil];
 //        self.title=@"行车记录";
     }
     return self;

@@ -47,15 +47,15 @@
     lable1.textAlignment=NSTextAlignmentRight;
     lable1.textColor=[UIColor blackColor];
     [bgview1 addSubview:lable1];
-    userTf=[[[UITextField alloc] initWithFrame:CGRectMake(lable1.frame.origin.x+lable1.frame.size.width+5.0, 15.5, 193.5, 29.0)] autorelease];
-    userTf.background=[UIImage imageNamed:@"inputtext"];
+    userTf = [[[UITextField alloc] initWithFrame:CGRectMake(lable1.frame.origin.x+lable1.frame.size.width+5.0, 15.5, 193.5, 29.0)] autorelease];
+    userTf.background = [UIImage imageNamed:@"inputtext"];
     userTf.contentVerticalAlignment=UIControlContentVerticalAlignmentCenter;
     [userTf setValue:[NSNumber numberWithInt:3] forKey:@"_paddingLeft"];
     userTf.delegate=self;
     [bgview1 addSubview:userTf];
     [self.view addSubview:bgview1];
     
-    UIImageView *bgview2=[[[UIImageView alloc] initWithFrame:CGRectMake(0.0,bgview1.frame.origin.y+bgview1.frame.size.height,320.0, 60.0)] autorelease];
+    UIImageView *bgview2 = [[[UIImageView alloc] initWithFrame:CGRectMake(0.0,bgview1.frame.origin.y+bgview1.frame.size.height,320.0, 60.0)] autorelease];
     bgview2.image=[UIImage imageNamed:@"tableview_cell_normal"];
     bgview2.userInteractionEnabled=YES;
     UILabel *lable2=[[[UILabel alloc] initWithFrame:CGRectMake(10.0, 17.5,90.0, 25.0)] autorelease];

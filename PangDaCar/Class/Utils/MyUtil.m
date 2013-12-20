@@ -581,6 +581,121 @@ static char const * const sectionKey = "kUIButtonSectionKey";
 }
 
 @end
+#pragma mark - NSDate (DH_Utilities)
+
+@implementation NSDate (DH_Utilities)
+
+- (NSString *)timeString
+{
+    NSDateFormatter *df = [[[NSDateFormatter alloc] init] autorelease];
+    [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *dateString = [df stringFromDate:self];
+    
+    return dateString;
+}
+
+- (NSString *)dateString
+{
+    NSDateFormatter *df = [[[NSDateFormatter alloc] init] autorelease];
+    [df setDateFormat:@"yyyy-MM-dd"];
+    NSString *dateString = [df stringFromDate:self];
+    
+    return dateString;
+}
+
+
+//month个月后的日期
+- (NSDate *)dateafterMonth:(int)month
+{
+	NSCalendar *calendar = [NSCalendar currentCalendar];
+	NSDateComponents *componentsToAdd = [[NSDateComponents alloc] init];
+	[componentsToAdd setMonth:month];
+	NSDate *dateAfterMonth = [calendar dateByAddingComponents:componentsToAdd toDate:self options:0];
+	[componentsToAdd release];
+	
+	return dateAfterMonth;
+}
+
+//返回day天后的日期(若day为负数,则为|day|天前的日期)
+- (NSDate *)dateAfterDay:(int)day
+{
+	NSCalendar *calendar = [NSCalendar currentCalendar];
+	// Get the weekday component of the current date
+	// NSDateComponents *weekdayComponents = [calendar components:NSWeekdayCalendarUnit fromDate:self];
+	NSDateComponents *componentsToAdd = [[NSDateComponents alloc] init];
+	// to get the end of week for a particular date, add (7 - weekday) days
+	[componentsToAdd setDay:day];
+	NSDate *dateAfterDay = [calendar dateByAddingComponents:componentsToAdd toDate:self options:0];
+	[componentsToAdd release];
+	
+	return dateAfterDay;
+}
+
+//获取月
+- (NSUInteger)getMonth
+{
+	NSCalendar *calendar = [NSCalendar currentCalendar];
+	NSDateComponents *dayComponents = [calendar components:(NSMonthCalendarUnit) fromDate:self];
+	return [dayComponents month];
+}
+
+//获取年
+- (NSUInteger)getYear
+{
+	NSCalendar *calendar = [NSCalendar currentCalendar];
+	NSDateComponents *dayComponents = [calendar components:(NSYearCalendarUnit) fromDate:self];
+	return [dayComponents year];
+}
+
+//获取日
+- (NSUInteger)getDay{
+	NSCalendar *calendar = [NSCalendar currentCalendar];
+	NSDateComponents *dayComponents = [calendar components:(NSDayCalendarUnit) fromDate:self];
+	return [dayComponents day];
+}
+
+//返回该月的第一天
+- (NSDate *)beginningOfMonth
+{
+	return [self dateAfterDay:-[self getDay] + 1];
+}
+
+//该月的最后一天
+- (NSDate *)endOfMonth
+{
+	return [[[self beginningOfMonth] dateafterMonth:1] dateAfterDay:-1];
+}
+
+//返回一周的第几天(周末为第一天)
+- (NSUInteger)weekday {
+	NSCalendar *calendar = [NSCalendar currentCalendar];
+	NSDateComponents *weekdayComponents = [calendar components:(NSWeekdayCalendarUnit) fromDate:self];
+	return [weekdayComponents weekday];
+}
+
+//是闰年
+- (BOOL)isLeapYear
+{
+    BOOL isLeapYear = NO;
+    
+    int year = [self getYear];
+    //被400乘除
+    if (year % 400 == 0 )
+    {
+        isLeapYear = YES;
+    }
+    else
+    {
+        //不被100整除但被4整除
+        if (year % 100 != 0 && year % 4 == 0) {
+            isLeapYear = YES;
+        }
+    }
+    
+    return isLeapYear;
+}
+
+@end
 
 #pragma mark - MyUtil
 
@@ -698,6 +813,36 @@ static char const * const sectionKey = "kUIButtonSectionKey";
     [tempDate setLocale:[NSLocale currentLocale]];
     
     [tempDate setDateFormat:@"yyyy-MM-dd"];//
+    
+    NSDate* now = [NSDate date];
+    NSString *tempDatestring = [tempDate stringFromDate:now];
+    
+    
+    return tempDatestring;
+    //    //NSLog(@"time.....%@",now);
+}
+
++(NSString *)GetNowYear
+{
+    NSDateFormatter *tempDate = [[[NSDateFormatter alloc]init] autorelease];
+    [tempDate setLocale:[NSLocale currentLocale]];
+    
+    [tempDate setDateFormat:@"yyyy年"];//
+    
+    NSDate* now = [NSDate date];
+    NSString *tempDatestring = [tempDate stringFromDate:now];
+    
+    
+    return tempDatestring;
+    //    //NSLog(@"time.....%@",now);
+}
+
++(NSString *)GetNowYearAndMonth
+{
+    NSDateFormatter *tempDate = [[[NSDateFormatter alloc]init] autorelease];
+    [tempDate setLocale:[NSLocale currentLocale]];
+    
+    [tempDate setDateFormat:@"yyyy年MM月"];//
     
     NSDate* now = [NSDate date];
     NSString *tempDatestring = [tempDate stringFromDate:now];

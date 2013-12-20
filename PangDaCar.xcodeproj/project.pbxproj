@@ -119,6 +119,27 @@
 		9E23C251185EE9580003CD8B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E23C250185EE9580003CD8B /* CFNetwork.framework */; };
 		9E23C253185EECE60003CD8B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E23C252185EECE60003CD8B /* CoreFoundation.framework */; };
 		9E23C255185EECF70003CD8B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E23C254185EECF70003CD8B /* SystemConfiguration.framework */; };
+		9E372CB5186329A5009DA07A /* PangDaCarDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E372CA9186329A5009DA07A /* PangDaCarDao.m */; };
+		9E372CB6186329A5009DA07A /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E372CAC186329A5009DA07A /* FMDatabase.m */; };
+		9E372CB7186329A5009DA07A /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E372CAE186329A5009DA07A /* FMDatabaseAdditions.m */; };
+		9E372CB8186329A5009DA07A /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E372CB0186329A5009DA07A /* FMDatabasePool.m */; };
+		9E372CB9186329A5009DA07A /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E372CB2186329A5009DA07A /* FMDatabaseQueue.m */; };
+		9E372CBA186329A5009DA07A /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E372CB4186329A5009DA07A /* FMResultSet.m */; };
+		9EA528161863EE380089EE4E /* BillInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA528151863EE380089EE4E /* BillInfo.m */; };
+		9EA5281B18640B3A0089EE4E /* BillCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA5281918640B3A0089EE4E /* BillCell.m */; };
+		9EA5281C18640B3A0089EE4E /* BillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EA5281A18640B3A0089EE4E /* BillCell.xib */; };
+		9EA5282718640B840089EE4E /* bill_icon_00.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA5281E18640B830089EE4E /* bill_icon_00.png */; };
+		9EA5282818640B840089EE4E /* bill_icon_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA5281F18640B830089EE4E /* bill_icon_01.png */; };
+		9EA5282918640B840089EE4E /* bill_icon_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA5282018640B830089EE4E /* bill_icon_02.png */; };
+		9EA5282A18640B840089EE4E /* bill_icon_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA5282118640B830089EE4E /* bill_icon_03.png */; };
+		9EA5282B18640B840089EE4E /* bill_icon_04.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA5282218640B830089EE4E /* bill_icon_04.png */; };
+		9EA5282C18640B840089EE4E /* bill_icon_05.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA5282318640B830089EE4E /* bill_icon_05.png */; };
+		9EA5282D18640B840089EE4E /* bill_icon_06.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA5282418640B830089EE4E /* bill_icon_06.png */; };
+		9EA5282E18640B840089EE4E /* bill_icon_07.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA5282518640B840089EE4E /* bill_icon_07.png */; };
+		9EA5282F18640B840089EE4E /* bill_icon_08.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EA5282618640B840089EE4E /* bill_icon_08.png */; };
+		9ED915FB18632F350036F731 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ED915FA18632F350036F731 /* libsqlite3.0.dylib */; };
+		9ED915FE186334760036F731 /* AddBillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED915FD186334760036F731 /* AddBillViewController.m */; };
+		9ED91605186335FE0036F731 /* CustomTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED91604186335FE0036F731 /* CustomTextField.m */; };
 		F14D3E78185C5A7D001DE0B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F14D3E77185C5A7D001DE0B4 /* UIKit.framework */; };
 		F14D3E7A185C5A7D001DE0B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F14D3E79185C5A7D001DE0B4 /* Foundation.framework */; };
 		F14D3E7C185C5A7D001DE0B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F14D3E7B185C5A7D001DE0B4 /* CoreGraphics.framework */; };
@@ -421,6 +442,37 @@
 		9E23C250185EE9580003CD8B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		9E23C252185EECE60003CD8B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		9E23C254185EECF70003CD8B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9E372CA8186329A5009DA07A /* PangDaCarDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PangDaCarDao.h; sourceTree = "<group>"; };
+		9E372CA9186329A5009DA07A /* PangDaCarDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PangDaCarDao.m; sourceTree = "<group>"; };
+		9E372CAB186329A5009DA07A /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		9E372CAC186329A5009DA07A /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		9E372CAD186329A5009DA07A /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		9E372CAE186329A5009DA07A /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		9E372CAF186329A5009DA07A /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		9E372CB0186329A5009DA07A /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		9E372CB1186329A5009DA07A /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		9E372CB2186329A5009DA07A /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		9E372CB3186329A5009DA07A /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		9E372CB4186329A5009DA07A /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		9EA528141863EE380089EE4E /* BillInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillInfo.h; sourceTree = "<group>"; };
+		9EA528151863EE380089EE4E /* BillInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillInfo.m; sourceTree = "<group>"; };
+		9EA5281818640B3A0089EE4E /* BillCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BillCell.h; sourceTree = "<group>"; };
+		9EA5281918640B3A0089EE4E /* BillCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillCell.m; sourceTree = "<group>"; };
+		9EA5281A18640B3A0089EE4E /* BillCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillCell.xib; sourceTree = "<group>"; };
+		9EA5281E18640B830089EE4E /* bill_icon_00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bill_icon_00.png; sourceTree = "<group>"; };
+		9EA5281F18640B830089EE4E /* bill_icon_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bill_icon_01.png; sourceTree = "<group>"; };
+		9EA5282018640B830089EE4E /* bill_icon_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bill_icon_02.png; sourceTree = "<group>"; };
+		9EA5282118640B830089EE4E /* bill_icon_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bill_icon_03.png; sourceTree = "<group>"; };
+		9EA5282218640B830089EE4E /* bill_icon_04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bill_icon_04.png; sourceTree = "<group>"; };
+		9EA5282318640B830089EE4E /* bill_icon_05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bill_icon_05.png; sourceTree = "<group>"; };
+		9EA5282418640B830089EE4E /* bill_icon_06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bill_icon_06.png; sourceTree = "<group>"; };
+		9EA5282518640B840089EE4E /* bill_icon_07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bill_icon_07.png; sourceTree = "<group>"; };
+		9EA5282618640B840089EE4E /* bill_icon_08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bill_icon_08.png; sourceTree = "<group>"; };
+		9ED915FA18632F350036F731 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		9ED915FC186334760036F731 /* AddBillViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBillViewController.h; sourceTree = "<group>"; };
+		9ED915FD186334760036F731 /* AddBillViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBillViewController.m; sourceTree = "<group>"; };
+		9ED91603186335FE0036F731 /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
+		9ED91604186335FE0036F731 /* CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextField.m; sourceTree = "<group>"; };
 		F14D3E74185C5A7D001DE0B4 /* PangDaCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PangDaCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F14D3E77185C5A7D001DE0B4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F14D3E79185C5A7D001DE0B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -536,6 +588,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ED915FB18632F350036F731 /* libsqlite3.0.dylib in Frameworks */,
 				F18504BE186292DD00BA0F69 /* ImageIO.framework in Frameworks */,
 				F1897467186135D600EFA9F4 /* QuartzCore.framework in Frameworks */,
 				9E23C255185EECF70003CD8B /* SystemConfiguration.framework in Frameworks */,
@@ -555,7 +608,7 @@
 			children = (
 				F183195F1862ECAA00501BE1 /* FuelCalculate */,
 				F189746D18613E9800EFA9F4 /* Login */,
-				F189748618616BB900EFA9F4 /* widget */,
+				F189748618616BB900EFA9F4 /* Widget */,
 				F185049F18628A6A00BA0F69 /* Carpurchase */,
 				F1897480186150B100EFA9F4 /* RoadSecure */,
 				F1892E7E1860516C00026051 /* Discount */,
@@ -563,6 +616,7 @@
 				F1800A35185F2FD2005A2FE0 /* MainTain */,
 				F1800A2C185F2A87005A2FE0 /* CarPath */,
 				9E23C23F185EE7D00003CD8B /* Utils */,
+				9ED915FF186335CE0036F731 /* CustomVIew */,
 				9E23C102185EE6FD0003CD8B /* NetService */,
 				9E23C0FD185EE6D50003CD8B /* External */,
 			);
@@ -572,6 +626,7 @@
 		9E23C0FD185EE6D50003CD8B /* External */ = {
 			isa = PBXGroup;
 			children = (
+				9E372CA6186329A5009DA07A /* Sqlite */,
 				F18504A31862927A00BA0F69 /* SDWebImage */,
 				9E23C246185EE8490003CD8B /* JSON */,
 				9E23C0FE185EE6D50003CD8B /* OpenUDID */,
@@ -642,6 +697,8 @@
 				9E23C11F185EE6FD0003CD8B /* UserInfo.m */,
 				9E23C120185EE6FD0003CD8B /* UserPublicInfo.h */,
 				9E23C121185EE6FD0003CD8B /* UserPublicInfo.m */,
+				9EA528141863EE380089EE4E /* BillInfo.h */,
+				9EA528151863EE380089EE4E /* BillInfo.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -860,6 +917,76 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		9E372CA6186329A5009DA07A /* Sqlite */ = {
+			isa = PBXGroup;
+			children = (
+				9E372CA7186329A5009DA07A /* Dao */,
+				9E372CAA186329A5009DA07A /* FMDB */,
+			);
+			path = Sqlite;
+			sourceTree = "<group>";
+		};
+		9E372CA7186329A5009DA07A /* Dao */ = {
+			isa = PBXGroup;
+			children = (
+				9E372CA8186329A5009DA07A /* PangDaCarDao.h */,
+				9E372CA9186329A5009DA07A /* PangDaCarDao.m */,
+			);
+			path = Dao;
+			sourceTree = "<group>";
+		};
+		9E372CAA186329A5009DA07A /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				9E372CAB186329A5009DA07A /* FMDatabase.h */,
+				9E372CAC186329A5009DA07A /* FMDatabase.m */,
+				9E372CAD186329A5009DA07A /* FMDatabaseAdditions.h */,
+				9E372CAE186329A5009DA07A /* FMDatabaseAdditions.m */,
+				9E372CAF186329A5009DA07A /* FMDatabasePool.h */,
+				9E372CB0186329A5009DA07A /* FMDatabasePool.m */,
+				9E372CB1186329A5009DA07A /* FMDatabaseQueue.h */,
+				9E372CB2186329A5009DA07A /* FMDatabaseQueue.m */,
+				9E372CB3186329A5009DA07A /* FMResultSet.h */,
+				9E372CB4186329A5009DA07A /* FMResultSet.m */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		9EA5281718640B300089EE4E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9EA5281818640B3A0089EE4E /* BillCell.h */,
+				9EA5281918640B3A0089EE4E /* BillCell.m */,
+				9EA5281A18640B3A0089EE4E /* BillCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9EA5281D18640B7C0089EE4E /* CarBills */ = {
+			isa = PBXGroup;
+			children = (
+				9EA5281E18640B830089EE4E /* bill_icon_00.png */,
+				9EA5281F18640B830089EE4E /* bill_icon_01.png */,
+				9EA5282018640B830089EE4E /* bill_icon_02.png */,
+				9EA5282118640B830089EE4E /* bill_icon_03.png */,
+				9EA5282218640B830089EE4E /* bill_icon_04.png */,
+				9EA5282318640B830089EE4E /* bill_icon_05.png */,
+				9EA5282418640B830089EE4E /* bill_icon_06.png */,
+				9EA5282518640B840089EE4E /* bill_icon_07.png */,
+				9EA5282618640B840089EE4E /* bill_icon_08.png */,
+			);
+			path = CarBills;
+			sourceTree = "<group>";
+		};
+		9ED915FF186335CE0036F731 /* CustomVIew */ = {
+			isa = PBXGroup;
+			children = (
+				9ED91603186335FE0036F731 /* CustomTextField.h */,
+				9ED91604186335FE0036F731 /* CustomTextField.m */,
+			);
+			path = CustomVIew;
+			sourceTree = "<group>";
+		};
 		F14D3E6B185C5A7D001DE0B4 = {
 			isa = PBXGroup;
 			children = (
@@ -880,6 +1007,7 @@
 		F14D3E76185C5A7D001DE0B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9ED915FA18632F350036F731 /* libsqlite3.0.dylib */,
 				F18504BD186292DD00BA0F69 /* ImageIO.framework */,
 				F1897466186135D600EFA9F4 /* QuartzCore.framework */,
 				9E23C254185EECF70003CD8B /* SystemConfiguration.framework */,
@@ -971,8 +1099,11 @@
 		F185049F18628A6A00BA0F69 /* Carpurchase */ = {
 			isa = PBXGroup;
 			children = (
+				9EA5281718640B300089EE4E /* Cell */,
 				F18504A018628A8900BA0F69 /* CarpurchaseViewController.h */,
 				F18504A118628A8900BA0F69 /* CarpurchaseViewController.m */,
+				9ED915FC186334760036F731 /* AddBillViewController.h */,
+				9ED915FD186334760036F731 /* AddBillViewController.m */,
 			);
 			path = Carpurchase;
 			sourceTree = "<group>";
@@ -1031,7 +1162,7 @@
 			path = RoadSecure;
 			sourceTree = "<group>";
 		};
-		F189748618616BB900EFA9F4 /* widget */ = {
+		F189748618616BB900EFA9F4 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
 				F1C50D1D186195A800A283C9 /* RatingView.h */,
@@ -1039,6 +1170,7 @@
 				F189748718616BD900EFA9F4 /* MBProgressHUD.h */,
 				F189748818616BD900EFA9F4 /* MBProgressHUD.m */,
 			);
+			name = Widget;
 			path = widget;
 			sourceTree = "<group>";
 		};
@@ -1053,6 +1185,7 @@
 		F1DFFF5B185EF1EF0093385F /* imgs */ = {
 			isa = PBXGroup;
 			children = (
+				9EA5281D18640B7C0089EE4E /* CarBills */,
 				F18504C31862D7FC00BA0F69 /* rightarraw_btn_pressed@2x.png */,
 				F18504C41862D7FC00BA0F69 /* rightarraw_btn_normal@2x.png */,
 				F18504C51862D7FC00BA0F69 /* leftarraw_btn_pressed@2x.png */,
@@ -1147,7 +1280,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EA5282C18640B840089EE4E /* bill_icon_05.png in Resources */,
+				9EA5282A18640B840089EE4E /* bill_icon_03.png in Resources */,
 				F14D3E82185C5A7E001DE0B4 /* InfoPlist.strings in Resources */,
+				9EA5282F18640B840089EE4E /* bill_icon_08.png in Resources */,
 				F14D3E8A185C5A7E001DE0B4 /* Default.png in Resources */,
 				F14D3E8C185C5A7E001DE0B4 /* Default@2x.png in Resources */,
 				F14D3E8E185C5A7E001DE0B4 /* Default-568h@2x.png in Resources */,
@@ -1157,16 +1293,22 @@
 				F18123E618601CC800084BAC /* tableview_cell_normal.png in Resources */,
 				F18123E718601CC800084BAC /* tableview_cell_pressed.png in Resources */,
 				F18123EC186023B100084BAC /* inputtext.png in Resources */,
+				9EA5282E18640B840089EE4E /* bill_icon_07.png in Resources */,
 				F18123EE18602D5500084BAC /* btnbg@2x.png in Resources */,
 				F18123F418603A2200084BAC /* cell_bg_black@2x.png in Resources */,
 				F18123F518603A2200084BAC /* cell_bg_white@2x.png in Resources */,
 				F1892E60186041DF00026051 /* maintain_icon@2x.png in Resources */,
 				F1892E61186041DF00026051 /* maintain_icon1136@2x.png in Resources */,
+				9EA5282718640B840089EE4E /* bill_icon_00.png in Resources */,
 				F1892E641860430500026051 /* carpath_icon@2x.png in Resources */,
+				9EA5281C18640B3A0089EE4E /* BillCell.xib in Resources */,
 				F1892E651860430500026051 /* carpath_icon1136@2x.png in Resources */,
 				F1892E68186047A900026051 /* newdiscount_icon@2x.png in Resources */,
+				9EA5282B18640B840089EE4E /* bill_icon_04.png in Resources */,
 				F1892E69186047A900026051 /* newdiscount_icon1136@2x.png in Resources */,
+				9EA5282918640B840089EE4E /* bill_icon_02.png in Resources */,
 				F1892E6C1860492800026051 /* roadsecure_icon@2x.png in Resources */,
+				9EA5282818640B840089EE4E /* bill_icon_01.png in Resources */,
 				F1892E6D1860492800026051 /* roadsecure_icon1136@2x.png in Resources */,
 				F1892E7018604A1900026051 /* maintain_alert_icon@2x.png in Resources */,
 				F1892E7118604A1900026051 /* maintain_alert_icon1136@2x.png in Resources */,
@@ -1185,6 +1327,7 @@
 				F1C50D261861A73900A283C9 /* star_light@2x.png in Resources */,
 				F1C50D271861A73900A283C9 /* star_dark@2x.png in Resources */,
 				F18504C11862D18C00BA0F69 /* datebtn_white_bg@2x.png in Resources */,
+				9EA5282D18640B840089EE4E /* bill_icon_06.png in Resources */,
 				F18504C21862D18C00BA0F69 /* datebtn_grey_bg@2x.png in Resources */,
 				F18504C71862D7FC00BA0F69 /* rightarraw_btn_pressed@2x.png in Resources */,
 				F18504C81862D7FC00BA0F69 /* rightarraw_btn_normal@2x.png in Resources */,
@@ -1206,15 +1349,18 @@
 				9E23C1F6185EE6FD0003CD8B /* LoginReq.m in Sources */,
 				9E23C1DE185EE6FD0003CD8B /* Information.m in Sources */,
 				9E23C1E4185EE6FD0003CD8B /* UserInfo.m in Sources */,
+				9EA528161863EE380089EE4E /* BillInfo.m in Sources */,
 				9E23C1E8185EE6FD0003CD8B /* CarConditionReq.m in Sources */,
 				9E23C1EA185EE6FD0003CD8B /* CarInfoReq.m in Sources */,
 				9E23C1DF185EE6FD0003CD8B /* Message.m in Sources */,
 				9E23C214185EE6FD0003CD8B /* CarConditionResp.m in Sources */,
 				9E23C1EE185EE6FD0003CD8B /* DealReq.m in Sources */,
+				9E372CB9186329A5009DA07A /* FMDatabaseQueue.m in Sources */,
 				9E23C20B185EE6FD0003CD8B /* UnreadMessageReq.m in Sources */,
 				9E23C238185EE6FD0003CD8B /* UpdateMsgStateResp.m in Sources */,
 				9E23C224185EE6FD0003CD8B /* MaintainSettingResp.m in Sources */,
 				9E23C201185EE6FD0003CD8B /* RequestMsg4Upload.m in Sources */,
+				9ED91605186335FE0036F731 /* CustomTextField.m in Sources */,
 				9E23C23E185EE6FD0003CD8B /* Reachability.m in Sources */,
 				9E23C205185EE6FD0003CD8B /* TipsTypeReq.m in Sources */,
 				9E23C21B185EE6FD0003CD8B /* EditCarResp.m in Sources */,
@@ -1224,6 +1370,7 @@
 				9E23C1E1185EE6FD0003CD8B /* PeccancyRecord.m in Sources */,
 				9E23C1D8185EE6FD0003CD8B /* CheckNetwork.m in Sources */,
 				9E23C245185EE7D00003CD8B /* MyUtil.m in Sources */,
+				9ED915FE186334760036F731 /* AddBillViewController.m in Sources */,
 				9E23C212185EE6FD0003CD8B /* AdvertiseResp.m in Sources */,
 				9E23C227185EE6FD0003CD8B /* PeccancyRecordResp.m in Sources */,
 				9E23C1DB185EE6FD0003CD8B /* CarCheckInfo.m in Sources */,
@@ -1289,10 +1436,12 @@
 				9E23C20D185EE6FD0003CD8B /* UpgradeReq.m in Sources */,
 				9E23C20C185EE6FD0003CD8B /* UpdateMsgStateReq.m in Sources */,
 				9E23C1ED185EE6FD0003CD8B /* DashBoardReq.m in Sources */,
+				9E372CB7186329A5009DA07A /* FMDatabaseAdditions.m in Sources */,
 				9E23C204185EE6FD0003CD8B /* TipsReq.m in Sources */,
 				9E23C1D9185EE6FD0003CD8B /* DHServiceInvocation.m in Sources */,
 				9E23C21A185EE6FD0003CD8B /* DealResp.m in Sources */,
 				9E23C207185EE6FD0003CD8B /* TrackingPathsReq.m in Sources */,
+				9E372CB5186329A5009DA07A /* PangDaCarDao.m in Sources */,
 				9E23C229185EE6FD0003CD8B /* PswModifyResp.m in Sources */,
 				9E23C1FE185EE6FD0003CD8B /* RegisterReq.m in Sources */,
 				9E23C1F1185EE6FD0003CD8B /* FourSListReq.m in Sources */,
@@ -1309,6 +1458,8 @@
 				9E23C1EB185EE6FD0003CD8B /* CarPositionReq.m in Sources */,
 				9E23C225185EE6FD0003CD8B /* PeccancyCarsResp.m in Sources */,
 				F14D3E91185C5A7E001DE0B4 /* HomeViewController.m in Sources */,
+				9E372CBA186329A5009DA07A /* FMResultSet.m in Sources */,
+				9EA5281B18640B3A0089EE4E /* BillCell.m in Sources */,
 				9E23C21F185EE6FD0003CD8B /* HistoryPeccancyListResp.m in Sources */,
 				9E23C20F185EE6FD0003CD8B /* UserInfoReq.m in Sources */,
 				9E23C24C185EE8650003CD8B /* EMarketing_BarButtonItemUtil.m in Sources */,
@@ -1322,6 +1473,7 @@
 				F1892E811860517C00026051 /* DiscountListViewController.m in Sources */,
 				F1892E88186059A300026051 /* DiscountDetailViewController.m in Sources */,
 				F189746A1861383900EFA9F4 /* MainTainOrderViewController.m in Sources */,
+				9E372CB6186329A5009DA07A /* FMDatabase.m in Sources */,
 				F1897483186150C100EFA9F4 /* RoadSecureViewController.m in Sources */,
 				F189748918616BD900EFA9F4 /* MBProgressHUD.m in Sources */,
 				F1C50D1C1861931E00A283C9 /* FeedBackViewController.m in Sources */,
@@ -1334,6 +1486,7 @@
 				F18504B91862928300BA0F69 /* SDWebImageManager.m in Sources */,
 				F18504BA1862928300BA0F69 /* SDWebImagePrefetcher.m in Sources */,
 				F18504BB1862928300BA0F69 /* UIButton+WebCache.m in Sources */,
+				9E372CB8186329A5009DA07A /* FMDatabasePool.m in Sources */,
 				F18504BC1862928300BA0F69 /* UIImageView+WebCache.m in Sources */,
 				F18319621862ECBE00501BE1 /* FuelCalculateViewController.m in Sources */,
 			);

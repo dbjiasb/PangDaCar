@@ -176,6 +176,37 @@
 
 @end
 
+#pragma mark - NSDate (DH_Utilities)
+@interface NSDate (DH_Utilities)
+
+- (NSString *)timeString;
+- (NSString *)dateString;
+
+//该月的最后一天
+- (NSDate *)endOfMonth;
+
+//返回该月的第一天
+- (NSDate *)beginningOfMonth;
+//获取日
+- (NSUInteger)getDay;
+//获取年
+- (NSUInteger)getYear;
+//获取月
+- (NSUInteger)getMonth;
+
+//返回day天后的日期(若day为负数,则为|day|天前的日期)
+- (NSDate *)dateAfterDay:(int)day;
+
+//month个月后的日期
+- (NSDate *)dateafterMonth:(int)month;
+//返回一周的第几天(周末为第一天)
+- (NSUInteger)weekday ;
+
+//是否闰年
+- (BOOL)isLeapYear;//
+
+@end
+
 @interface MyUtil : NSObject
 + (UIButton *)buttonWithFrame:(CGRect)frame
                        target:target
@@ -196,6 +227,9 @@
 + (NSString *)GetNowTime;
 //当前日期
 +(NSString *)GetNowDate;
++(NSString *)GetNowYearAndMonth;
++(NSString *)GetNowYear;
+
 + (NSString *)timeIntervalString;
 
 + (NSString *)threeDaysAfter;

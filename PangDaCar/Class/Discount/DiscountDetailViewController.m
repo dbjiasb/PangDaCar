@@ -82,7 +82,8 @@
     DealReq *req=[[DealReq alloc] init];
     req.method = @"GET";
     
-    discountdeailVoucher=[DHServiceInvocation invokeWithNAME:[NSString stringWithFormat:@"%@%@/",Invoke_Name_Deals,self.dicountId] requestMsg:req eventHandle:(id<ServiceInvokeHandle>)self];
+    NSString *newUrl = [Invoke_Name_Deals stringByReplacingOccurrencesOfString:@"UUID" withString:[MyDefaults getUserName]];
+    discountdeailVoucher=[DHServiceInvocation invokeWithNAME:[NSString stringWithFormat:@"%@%@/",newUrl,self.dicountId] requestMsg:req eventHandle:(id<ServiceInvokeHandle>)self];
 }
 
 - (void)didSuccess:(id)result voucher:(id)voucher

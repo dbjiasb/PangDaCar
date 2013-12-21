@@ -42,7 +42,7 @@
     if (!ISNULL(list) && [list isKindOfClass:[NSArray class]])
     {
         NSString *ceche = [MyUtil getCachePath];
-        NSString *url = [NSString stringWithFormat:@"%@/lastWeather.txt",ceche];
+        NSString *url = [NSString stringWithFormat:@"%@/lastAd.txt",ceche];
         BOOL suc = [list writeToFile:url atomically:YES];
 //        BOOL suc = [list writeToURL:[NSURL URLWithString:url] atomically:YES];
         

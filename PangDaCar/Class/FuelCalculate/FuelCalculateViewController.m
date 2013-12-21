@@ -113,90 +113,102 @@
     NSArray *keys2=[NSArray arrayWithObjects:@"升",@"升每公里",@"元/百公里", nil];
     for(int i=0;i<3;i++)
     {
+        UILabel *resultTxt=[[[UILabel alloc] initWithFrame:CGRectMake(0.0, 4.5+35.0*i, 115.0, 25.0)] autorelease];
+        resultTxt.textColor=[UIColor blackColor];
+        resultTxt.backgroundColor=[UIColor clearColor];
+        resultTxt.text=[keys1 objectAtIndex:i];
+        resultTxt.font=[UIFont systemFontOfSize:15.0];
+        resultTxt.textAlignment=NSTextAlignmentCenter;
+        [resultBgView addSubview:resultTxt];
+        if(i==0)
+        {
+            fuellLabel=[[[UILabel alloc] initWithFrame:CGRectMake(resultTxt.frame.origin.x+resultTxt.frame.size.width+3.0, 4.5, 108, 25.0)] autorelease];
+            fuellLabel.textColor=[UIColor blueColor];
+            fuellLabel.backgroundColor=[UIColor clearColor];
+            fuellLabel.textAlignment=NSTextAlignmentCenter;
+            fuellLabel.font=[UIFont systemFontOfSize:15.0];
+            [resultBgView addSubview:fuellLabel];
+        }
+        else if (i==1)
+        {
+            aveFuelLable=[[[UILabel alloc] initWithFrame:CGRectMake(resultTxt.frame.origin.x+resultTxt.frame.size.width+3.0, 4.5+35.0,108, 25.0)] autorelease];
+            aveFuelLable.textColor=[UIColor blueColor];
+            aveFuelLable.backgroundColor=[UIColor clearColor];
+            aveFuelLable.textAlignment=NSTextAlignmentCenter;
+            aveFuelLable.font=[UIFont systemFontOfSize:15.0];
+            [resultBgView addSubview:aveFuelLable];
+        }
+        else if (i==2)
+        {
+            aveFeeNumLabel=[[[UILabel alloc] initWithFrame:CGRectMake(resultTxt.frame.origin.x+resultTxt.frame.size.width+3.0, 4.5+35.0*2,108, 25.0)] autorelease];
+            aveFeeNumLabel.textColor=[UIColor blueColor];
+            aveFeeNumLabel.backgroundColor=[UIColor clearColor];
+            aveFeeNumLabel.textAlignment=NSTextAlignmentCenter;
+            aveFeeNumLabel.font=[UIFont systemFontOfSize:15.0];
+            [resultBgView addSubview:aveFeeNumLabel];
+        }
+        if(i!=0)
+        {
+            UIView *lineview=[[[UIView alloc] initWithFrame:CGRectMake(0.0, 35.0*i, 300.0, 1.0)] autorelease];
+            lineview.backgroundColor=RGBCOLOR(218,218, 218);
+            [resultBgView addSubview:lineview];
+        }
         
+        UILabel *resultTxt1=[[[UILabel alloc] initWithFrame:CGRectMake(resultTxt.frame.origin.x+resultTxt.frame.size.width+113.0, 4.5+35.0*i, 73, 25.0)] autorelease];
+        resultTxt1.textColor=[UIColor blackColor];
+        resultTxt1.backgroundColor=[UIColor clearColor];
+        resultTxt1.text=[keys2 objectAtIndex:i];
+        resultTxt1.font=[UIFont systemFontOfSize:15.0];
+        [resultBgView addSubview:resultTxt1];
     }
     
-    UIView *lineview1=[[[UIView alloc] initWithFrame:CGRectMake(0.0, 35.0, 300.0, 1.0)] autorelease];
-    lineview1.backgroundColor=RGBCOLOR(218,218, 218);
-    [resultBgView addSubview:lineview1];
-    
-    UIView *lineview2=[[[UIView alloc] initWithFrame:CGRectMake(0.0, 70.0, 300.0, 1.0)] autorelease];
+    UIView *lineview2=[[[UIView alloc] initWithFrame:CGRectMake(115.0, 0.0, 1.0, 107.0)] autorelease];
     lineview2.backgroundColor=RGBCOLOR(218,218, 218);
     [resultBgView addSubview:lineview2];
-    
-    UIView *lineview3=[[[UIView alloc] initWithFrame:CGRectMake(130.0, 0.0, 1.0, 107.0)] autorelease];
-    lineview3.backgroundColor=RGBCOLOR(218,218, 218);
-    [resultBgView addSubview:lineview3];
-    
-    UILabel *resultTxt1=[[[UILabel alloc] initWithFrame:CGRectMake(0.0, 4.5, 130.0, 25.0)] autorelease];
-    resultTxt1.textColor=[UIColor blackColor];
-    resultTxt1.backgroundColor=[UIColor clearColor];
-    resultTxt1.text=@"加油量";
-    resultTxt1.textAlignment=NSTextAlignmentCenter;
-    [resultBgView addSubview:resultTxt1];
-    
-    UILabel *resultTxt2=[[[UILabel alloc] initWithFrame:CGRectMake(0.0, 4.5+35.0, 130.0, 25.0)] autorelease];
-    resultTxt2.textColor=[UIColor blackColor];
-    resultTxt2.backgroundColor=[UIColor clearColor];
-    resultTxt2.text=@"本次平均耗油";
-    resultTxt2.textAlignment=NSTextAlignmentCenter;
-    [resultBgView addSubview:resultTxt2];
-    
-    UILabel *resultTxt3=[[[UILabel alloc] initWithFrame:CGRectMake(0.0, 4.5+35.0*2, 130.0, 25.0)] autorelease];
-    resultTxt3.textColor=[UIColor blackColor];
-    resultTxt3.backgroundColor=[UIColor clearColor];
-    resultTxt3.text=@"平均每公里耗油";
-    resultTxt3.textAlignment=NSTextAlignmentCenter;
-    [resultBgView addSubview:resultTxt3];
-    
-    resultValue1=[[[UILabel alloc] initWithFrame:CGRectMake(lineview3.frame.origin.x+lineview3.frame.size.width, 4.5, 85, 25.0)] autorelease];
-    resultValue1.textColor=[UIColor blueColor];
-    resultValue1.backgroundColor=[UIColor redColor];
-    resultValue1.textAlignment=NSTextAlignmentCenter;
-    resultValue1.font=[UIFont systemFontOfSize:15.0];
-    [resultBgView addSubview:resultValue1];
-    
-    UILabel *resultTxt4=[[[UILabel alloc] initWithFrame:CGRectMake(resultValue1.frame.origin.x+resultValue1.frame.size.width, 4.5, 85, 25.0)] autorelease];
-    resultTxt4.textColor=[UIColor blackColor];
-    resultTxt4.backgroundColor=[UIColor clearColor];
-    resultTxt4.text=@"升";
-    resultTxt4.font=[UIFont systemFontOfSize:15.0];
-    [resultBgView addSubview:resultTxt4];
-    
-    resultValue2=[[[UILabel alloc] initWithFrame:CGRectMake(lineview3.frame.origin.x+lineview3.frame.size.width, 4.5+35.0, 85, 25.0)] autorelease];
-    resultValue2.textColor=[UIColor blueColor];
-    resultValue2.backgroundColor=[UIColor redColor];
-    resultValue2.textAlignment=NSTextAlignmentCenter;
-    resultValue2.font=[UIFont systemFontOfSize:15.0];
-    [resultBgView addSubview:resultValue2];
-    
-    UILabel *resultTxt5=[[[UILabel alloc] initWithFrame:CGRectMake(resultValue2.frame.origin.x+resultValue2.frame.size.width,4.5+35.0,85, 25.0)] autorelease];
-    resultTxt5.textColor=[UIColor blackColor];
-    resultTxt5.backgroundColor=[UIColor clearColor];
-    resultTxt5.font=[UIFont systemFontOfSize:15.0];
-    resultTxt5.text=@"升/百公里";
-    [resultBgView addSubview:resultTxt5];
-    
-    resultValue3=[[[UILabel alloc] initWithFrame:CGRectMake(lineview3.frame.origin.x+lineview3.frame.size.width, 4.5+35.0*2, 85, 25.0)] autorelease];
-    resultValue3.textColor=[UIColor blueColor];
-    resultValue3.backgroundColor=[UIColor redColor];
-    resultValue3.textAlignment=NSTextAlignmentCenter;
-    resultValue3.font=[UIFont systemFontOfSize:15.0];
-    [resultBgView addSubview:resultValue3];
-    
-    UILabel *resultTxt6=[[[UILabel alloc] initWithFrame:CGRectMake(resultValue3.frame.origin.x+resultValue3.frame.size.width,4.5+35.0*2,85, 25.0)] autorelease];
-    resultTxt6.textColor=[UIColor blackColor];
-    resultTxt6.backgroundColor=[UIColor clearColor];
-    resultTxt6.font=[UIFont systemFontOfSize:15.0];
-    resultTxt6.text=@"元/百公里";
-    [resultBgView addSubview:resultTxt6];
-    
-    
 }
 
+#pragma mark-Calculator Data
 -(void)btnClick:(id)sender
 {
+    NSString *distanceStr=distanceTf.text;
+    NSString *addsoilPriceStr=addSoilPriceTf.text;
+    NSString *unitpriceStr=unitPriceTf.text;
     
+    float distance=[distanceStr floatValue];
+    float addsoilPrice=[addsoilPriceStr floatValue];
+    float unitprice=[unitpriceStr floatValue];
+    
+    if(distanceStr.length==0||distance==0)
+    {
+        [MyUtil showMessageBox:@"请输入公里数！"];
+        return;
+    }
+    if(addsoilPriceStr.length==0||addsoilPrice==0)
+    {
+        [MyUtil showMessageBox:@"请输入加油费用！"];
+        return;
+    }
+    if(unitpriceStr.length==0||unitprice==0)
+    {
+        [MyUtil showMessageBox:@"请输入当前油价！"];
+        return;
+    }
+    [self resignAllField];
+    
+    float fuelNum = addsoilPrice/unitprice;
+    float aveFuel = fuelNum/distance*100;
+    float aveFee = aveFuel*unitprice;
+    
+    fuellLabel.text=[NSString stringWithFormat:@"%.2f",fuelNum];
+    aveFuelLable.text=[NSString stringWithFormat:@"%.2f",aveFuel];
+    aveFeeNumLabel.text=[NSString stringWithFormat:@"%.2f",aveFee];
+}
+
+-(void)resignAllField
+{
+    [distanceTf resignFirstResponder];
+    [addSoilPriceTf resignFirstResponder];
+    [unitPriceTf resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -219,6 +231,24 @@
         self.view.frame=rect;
     }
     [UIView commitAnimations];
+}
+
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if(textField.text.length>10 && ![string isEqualToString:@""])
+    {
+        return NO;
+    }
+    if(![string isEqualToString:@""])
+    {
+        char c=[string UTF8String][0];
+        if((c>57 || c<48) && c!=46)
+        {
+            [MyUtil showMessageBox:@"只能输入数字"];
+            return NO;
+        }
+    }
+    return YES;
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField

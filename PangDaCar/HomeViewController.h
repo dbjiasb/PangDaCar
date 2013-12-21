@@ -10,6 +10,7 @@
 
 @interface HomeViewController : UIViewController
 {
-    
+    UIScrollView *adscoll;
+    NSMutableArray *adArray;
 }
 @end

@@ -13,8 +13,6 @@
     UILabel *carModel;
     UILabel *carType;
     UILabel *carColor;
-    UILabel *carOutput;
-    UILabel *carSoilType;
     UILabel *carNumType;
     UILabel *carNum;
     UILabel *carEngineNum;

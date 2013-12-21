@@ -13,8 +13,8 @@
     UITextField *distanceTf;
     UITextField *addSoilPriceTf;
     UITextField *unitPriceTf;
-    UILabel *resultValue1;
-    UILabel *resultValue2;
-    UILabel *resultValue3;
+    UILabel *fuellLabel;
+    UILabel *aveFuelLable;
+    UILabel *aveFeeNumLabel;
 }
 @end

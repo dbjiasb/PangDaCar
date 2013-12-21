@@ -140,3 +140,9 @@
 #import "ProposalReq.h"
 #import "ProposalResp.h"
 
+#import "EditPwdReq.h"
+#import "EditPwdResp.h"
+
+#import "StolenStatusResp.h"
+#import "StolenStatusReq.h"
+

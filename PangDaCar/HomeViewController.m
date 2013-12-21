@@ -25,18 +25,33 @@
 #import "CarpurchaseViewController.h"
 #import "FuelCalculateViewController.h"
 #import "MyDefaults.h"
+#import "MBProgressHUD.h"
+#import "UIImageView+WebCache.h"
+#import "ADInfo.h"
 
 @interface HomeViewController ()
-
+{
+    id adVoucher;
+}
 @end
 
 @implementation HomeViewController
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        // Custom initialization
+        adArray=[[NSMutableArray alloc] init];
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    UIScrollView *adscoll=[[[UIScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 195.0)] autorelease];
+    adscoll=[[[UIScrollView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 195.0)] autorelease];
     adscoll.pagingEnabled=YES;
     //adscoll.delegate=self;
     adscoll.backgroundColor=[UIColor whiteColor];
@@ -45,6 +60,7 @@
     [self.view addSubview:adscoll];
     
     [self initBtn];
+    [self getAdFromFile];
 }
 
 -(void)initBtn
@@ -198,10 +214,95 @@
     }
 }
 
+#pragma mark-readFile
+-(void)getAdFromFile
+{
+    NSString *ceche = [MyUtil getCachePath];
+    NSString *url = [NSString stringWithFormat:@"%@/lastAd.txt",ceche];
+    NSArray *tempArray=[NSArray arrayWithContentsOfFile:url];
+    for (int i = 0; i < [tempArray count]; i++)
+    {
+        NSDictionary *itemDic = tempArray[i];
+        if (!ISNULL(itemDic))
+        {
+            ADInfo *adInfo = [[[ADInfo alloc] init] autorelease];
+            
+            [adInfo fillFromDictionary:itemDic];
+            
+            [adArray addObject:adInfo];
+        }
+    }
+    if([adArray count]>0)
+    {
+        [self addViewToScroll:[adArray autorelease]];
+    }
+    [self loadData];
+}
+
+#pragma mark-loadData
+-(void)loadData
+{
+    if([adArray count]==0)
+    {
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    }
+    AdvertiseReq *avert =[[AdvertiseReq alloc] init];
+    avert.method=@"GET";
+    adVoucher=[DHServiceInvocation invokeWithNAME:Invoke_Name_GetAdvertise requestMsg:avert eventHandle:(id<ServiceInvokeHandle>)self];
+}
+
+- (void)didSuccess:(id)result voucher:(id)voucher
+{
+    [MBProgressHUD hideHUDForView:self.view animated:NO];
+    if (voucher == adVoucher)
+    {
+        adVoucher = nil;
+        AdvertiseResp *resp = (AdvertiseResp *)result;
+        [adscoll removeAllSubviews];
+        [self addViewToScroll:resp.advertise_list];
+    }
+}
+
+- (void)didFailure:(NSError *)err voucher:(id)voucher
+{
+    [MBProgressHUD hideHUDForView:self.view animated:NO];
+    if (voucher == adVoucher)
+    {
+        adVoucher = nil;
+        [MyUtil showAlert:[err domain]];
+    }
+}
+
+#pragma -mark UIScrollView add view
+-(void)addViewToScroll:(NSArray *)array
+{
+    adscoll.contentSize = CGSizeMake(320.0*[array count], 195.0);
+    for(int i=0;i<[array count];i++)
+    {
+        ADInfo *adInfo=[array objectAtIndex:i];
+        UIImageView *adimg=[[UIImageView alloc] initWithFrame:CGRectMake(i*320.0f, 0.0f, 320.0f, adscoll.frame.size.height)];
+        adimg.userInteractionEnabled=YES;
+        [adimg setImageWithURL:[NSURL URLWithString:adInfo.advertise_img_url]];
+        [adscoll addSubview:adimg];
+        [adimg release];
+    }
+    UIPageControl *pageControl=[[UIPageControl alloc] initWithFrame:CGRectMake(0.0f, 185, 320.0f, 10.0f)];
+    pageControl.numberOfPages=[array count];
+    pageControl.currentPage=0;
+    [adscoll addSubview:pageControl];
+    [pageControl release];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)dealloc
+{
+    [adArray release];
+    [super dealloc];
 }
 
 @end

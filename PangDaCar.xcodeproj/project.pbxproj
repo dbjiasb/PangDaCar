@@ -209,6 +209,10 @@
 		F1897483186150C100EFA9F4 /* RoadSecureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1897482186150C100EFA9F4 /* RoadSecureViewController.m */; };
 		F18974851861518100EFA9F4 /* roadsecure_btn_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F18974841861518100EFA9F4 /* roadsecure_btn_bg@2x.png */; };
 		F189748918616BD900EFA9F4 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F189748818616BD900EFA9F4 /* MBProgressHUD.m */; };
+		F1AB5F1118640FE700567644 /* EditPwdReq.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AB5F1018640FE600567644 /* EditPwdReq.m */; };
+		F1AB5F141864149000567644 /* EditPwdResp.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AB5F131864148F00567644 /* EditPwdResp.m */; };
+		F1AB5F171864333400567644 /* StolenStatusReq.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AB5F161864333000567644 /* StolenStatusReq.m */; };
+		F1AB5F1A186433A100567644 /* StolenStatusResp.m in Sources */ = {isa = PBXBuildFile; fileRef = F1AB5F19186433A000567644 /* StolenStatusResp.m */; };
 		F1C50D1C1861931E00A283C9 /* FeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C50D1B1861931E00A283C9 /* FeedBackViewController.m */; };
 		F1C50D1F186195A800A283C9 /* RatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1C50D1E186195A800A283C9 /* RatingView.m */; };
 		F1C50D261861A73900A283C9 /* star_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1C50D241861A73900A283C9 /* star_light@2x.png */; };
@@ -573,6 +577,14 @@
 		F18974841861518100EFA9F4 /* roadsecure_btn_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "roadsecure_btn_bg@2x.png"; sourceTree = "<group>"; };
 		F189748718616BD900EFA9F4 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		F189748818616BD900EFA9F4 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		F1AB5F0F18640FE600567644 /* EditPwdReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPwdReq.h; sourceTree = "<group>"; };
+		F1AB5F1018640FE600567644 /* EditPwdReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPwdReq.m; sourceTree = "<group>"; };
+		F1AB5F121864148E00567644 /* EditPwdResp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPwdResp.h; sourceTree = "<group>"; };
+		F1AB5F131864148F00567644 /* EditPwdResp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPwdResp.m; sourceTree = "<group>"; };
+		F1AB5F151864332E00567644 /* StolenStatusReq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StolenStatusReq.h; sourceTree = "<group>"; };
+		F1AB5F161864333000567644 /* StolenStatusReq.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StolenStatusReq.m; sourceTree = "<group>"; };
+		F1AB5F181864339F00567644 /* StolenStatusResp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StolenStatusResp.h; sourceTree = "<group>"; };
+		F1AB5F19186433A000567644 /* StolenStatusResp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StolenStatusResp.m; sourceTree = "<group>"; };
 		F1C50D1A1861931E00A283C9 /* FeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedBackViewController.h; sourceTree = "<group>"; };
 		F1C50D1B1861931E00A283C9 /* FeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedBackViewController.m; sourceTree = "<group>"; };
 		F1C50D1D186195A800A283C9 /* RatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingView.h; sourceTree = "<group>"; };
@@ -794,6 +806,10 @@
 				9E23C179185EE6FD0003CD8B /* UserPublicInfoReq.m */,
 				9E23C17A185EE6FD0003CD8B /* WeatherReq.h */,
 				9E23C17B185EE6FD0003CD8B /* WeatherReq.m */,
+				F1AB5F0F18640FE600567644 /* EditPwdReq.h */,
+				F1AB5F1018640FE600567644 /* EditPwdReq.m */,
+				F1AB5F151864332E00567644 /* StolenStatusReq.h */,
+				F1AB5F161864333000567644 /* StolenStatusReq.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -889,6 +905,10 @@
 				9E23C1D2185EE6FD0003CD8B /* UserPublicInfoResp.m */,
 				9E23C1D3185EE6FD0003CD8B /* WeatherResp.h */,
 				9E23C1D4185EE6FD0003CD8B /* WeatherResp.m */,
+				F1AB5F121864148E00567644 /* EditPwdResp.h */,
+				F1AB5F131864148F00567644 /* EditPwdResp.m */,
+				F1AB5F181864339F00567644 /* StolenStatusResp.h */,
+				F1AB5F19186433A000567644 /* StolenStatusResp.m */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -1489,6 +1509,10 @@
 				9E372CB8186329A5009DA07A /* FMDatabasePool.m in Sources */,
 				F18504BC1862928300BA0F69 /* UIImageView+WebCache.m in Sources */,
 				F18319621862ECBE00501BE1 /* FuelCalculateViewController.m in Sources */,
+				F1AB5F1118640FE700567644 /* EditPwdReq.m in Sources */,
+				F1AB5F141864149000567644 /* EditPwdResp.m in Sources */,
+				F1AB5F171864333400567644 /* StolenStatusReq.m in Sources */,
+				F1AB5F1A186433A100567644 /* StolenStatusResp.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

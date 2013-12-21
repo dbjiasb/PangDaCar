@@ -14,4 +14,7 @@
     UITextField *newpwdTf;
     UITextField *confirmpwdTf;
 }
+@property(nonatomic,copy)NSString *pwd;
+@property(nonatomic,copy)NSString *newpwd;
+@property(nonatomic,copy)NSString *confirmpwd;
 @end

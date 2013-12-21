@@ -7,9 +7,12 @@
 //
 
 #import "EditPwdViewController.h"
+#import "MBProgressHUD.h"
 
 @interface EditPwdViewController ()
-
+{
+    id editPwdVoucher;
+}
 @end
 
 @implementation EditPwdViewController
@@ -95,13 +98,75 @@
     [confirmBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [confirmBtn setBackgroundImage:[UIImage imageNamed:@"btnbg"] forState:UIControlStateNormal];
     confirmBtn.titleLabel.font=[UIFont systemFontOfSize:20.0];
-    [confirmBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchDragInside];
+    [confirmBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:confirmBtn];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    if(editPwdVoucher)
+    {
+        [DHServiceInvocation cancel:editPwdVoucher];
+    }
+    
 }
 
 -(void)btnClick:(id)sender
 {
+    self.pwd=pwdTf.text;
+    self.newpwd=newpwdTf.text;
+    self.confirmpwd=confirmpwdTf.text;
+    if(self.pwd.length==0)
+    {
+        [MyUtil showAlert:@"请输入原始密码！"];
+        return;
+    }
+    if(self.newpwd.length==0)
+    {
+        [MyUtil showAlert:@"请输入新密码！"];
+        return;
+    }
+    if(![self.newpwd isEqualToString:self.confirmpwd])
+    {
+        [MyUtil showAlert:@"新密码和确认密码不一致！"];
+        return;
+    }
+    [self loadAction];
+}
+
+#pragma -mark loadData
+-(void)loadAction
+{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    EditPwdReq *req=[[EditPwdReq alloc] init];
+    req.old_pwd=self.pwd;
+    req.new_pwd=self.newpwd;
     
+    NSString *newUrl = [Invoke_Name_EditPwd stringByReplacingOccurrencesOfString:@"UUID" withString:[MyDefaults getUserName]];
+    editPwdVoucher = [DHServiceInvocation invokeWithNAME:newUrl
+                                            requestMsg:req
+                                           eventHandle:(id<ServiceInvokeHandle>)self];
+}
+
+- (void)didSuccess:(id)result voucher:(id)voucher
+{
+    [MBProgressHUD hideHUDForView:self.view animated:NO];
+    if (voucher == editPwdVoucher)
+    {
+        editPwdVoucher = nil;
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
+- (void)didFailure:(NSError *)err voucher:(id)voucher
+{
+    [MBProgressHUD hideHUDForView:self.view animated:NO];
+    if (voucher == editPwdVoucher)
+    {
+        editPwdVoucher = nil;
+        [MyUtil showAlert:[err domain]];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -125,6 +190,14 @@
         return NO;
     }
     return YES;
+}
+
+-(void)dealloc
+{
+    self.pwd=nil;
+    self.newpwd=nil;
+    self.confirmpwd=nil;
+    [super dealloc];
 }
 
 @end

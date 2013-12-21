@@ -9,7 +9,9 @@
 #import "CarInfoViewController.h"
 
 @interface CarInfoViewController ()
-
+{
+    id editPwdVoucher;
+}
 @end
 
 @implementation CarInfoViewController
@@ -35,6 +37,7 @@
     UITableView *table=[[UITableView alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 416.0+(iPhone5?88:0)) style:UITableViewStylePlain];
     table.delegate=self;
     table.dataSource=self;
+    table.separatorStyle=UITableViewCellSeparatorStyleNone;
     [self.view addSubview:table];
 }
 
@@ -66,24 +69,6 @@
     carColor=[[UILabel alloc] initWithFrame:CGRectMake(105.0, 11.0, 190.0, 25.0)];
     carColor.textColor=[UIColor blackColor];
     carColor.backgroundColor=[UIColor clearColor];
-    
-    if(carOutput)
-    {
-        [carOutput removeFromSuperview];
-        carOutput=nil;
-    }
-    carOutput=[[UILabel alloc] initWithFrame:CGRectMake(105.0, 11.0, 190.0, 25.0)];
-    carOutput.textColor=[UIColor blackColor];
-    carOutput.backgroundColor=[UIColor clearColor];
-    
-    if(carSoilType)
-    {
-        [carSoilType removeFromSuperview];
-        carSoilType=nil;
-    }
-    carSoilType=[[UILabel alloc] initWithFrame:CGRectMake(105.0, 11.0, 190.0, 25.0)];
-    carSoilType.textColor=[UIColor blackColor];
-    carSoilType.backgroundColor=[UIColor clearColor];
     
     if(carNumType)
     {
@@ -122,6 +107,38 @@
     carFrameNum.backgroundColor=[UIColor clearColor];
 }
 
+#pragma -mark loadData
+-(void)loadAction
+{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    EditPwdReq *req=[[EditPwdReq alloc] init];
+    
+    NSString *newUrl = [Invoke_Name_EditPwd stringByReplacingOccurrencesOfString:@"UUID" withString:[MyDefaults getUserName]];
+    editPwdVoucher = [DHServiceInvocation invokeWithNAME:newUrl
+                                              requestMsg:req
+                                             eventHandle:(id<ServiceInvokeHandle>)self];
+}
+
+- (void)didSuccess:(id)result voucher:(id)voucher
+{
+    [MBProgressHUD hideHUDForView:self.view animated:NO];
+    if (voucher == editPwdVoucher)
+    {
+        editPwdVoucher = nil;
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
+- (void)didFailure:(NSError *)err voucher:(id)voucher
+{
+    [MBProgressHUD hideHUDForView:self.view animated:NO];
+    if (voucher == editPwdVoucher)
+    {
+        editPwdVoucher = nil;
+        [MyUtil showAlert:[err domain]];
+    }
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -130,7 +147,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 9;
+    return 7;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -178,25 +195,17 @@
     }
     else if ([indexPath row]==3)
     {
-        titlelabel.text=@"排量:";
+        titlelabel.text=@"车牌类型:";
     }
     else if ([indexPath row]==4)
     {
-        titlelabel.text=@"燃油类型:";
+        titlelabel.text=@"车牌号:";
     }
     else if ([indexPath row]==5)
     {
-        titlelabel.text=@"车牌类型:";
-    }
-    else if ([indexPath row]==6)
-    {
-        titlelabel.text=@"车牌号:";
-    }
-    else if ([indexPath row]==7)
-    {
         titlelabel.text=@"发动机号:";
     }
-    else if ([indexPath row]==8)
+    else if ([indexPath row]==6)
     {
         titlelabel.text=@"车架号:";
     }
@@ -208,8 +217,6 @@
     [carModel release];
     [carType release];
     [carColor release];
-    [carOutput release];
-    [carSoilType release];
     [carNumType release];
     [carNum release];
     [carEngineNum release];
